@@ -1,3 +1,5 @@
+using CinemaProject.Data;
+
 namespace CinemaProject
 {
     public class Program
@@ -10,6 +12,7 @@ namespace CinemaProject
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddDbContext<DatabaseContext>();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
